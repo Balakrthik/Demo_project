@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.9 on win32)" generated="2024-09-12T11:49:14.683967" rpa="false" schemaversion="5">
+<suite id="s1" name="TestSuite" source="C:\Users\ADMIN\Desktop\Demo\TestSuite">
+<suite id="s1-s1" name="Testcase" source="C:\Users\ADMIN\Desktop\Demo\TestSuite\testcase.robot">
+<test id="s1-s1-t1" name="TC_01" line="5">
+<kw name="Login to Adactin" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-12T11:49:14.892492" level="INFO">Opening browser 'edge' to base url 'https://adactinhotelapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-12T11:49:14.892492" elapsed="4.391724"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-12T11:49:19.284216" elapsed="0.109560"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-09-12T11:49:19.405803" level="INFO">Page title is 'Adactin.com - Hotel Reservation System'.</msg>
+<arg>Adactin.com - Hotel Reservation System</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-09-12T11:49:19.394363" elapsed="0.012440"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-12T11:49:19.409356" level="INFO">Typing text 'Tonystark1234' into text field 'id=username'.</msg>
+<arg>${userid.Username}</arg>
+<arg>Tonystark1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T11:49:19.407799" elapsed="0.199557"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-12T11:49:19.608387" level="INFO">Typing text 'A02801' into text field 'id=password'.</msg>
+<arg>${userid.password}</arg>
+<arg>A02801</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T11:49:19.607356" elapsed="0.096997"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-12T11:49:19.705984" level="INFO">Clicking button 'id=login'.</msg>
+<arg>${user.login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T11:49:19.705350" elapsed="0.766151"/>
+</kw>
+<status status="PASS" start="2024-09-12T11:49:14.891495" elapsed="5.580006"/>
+</kw>
+<status status="PASS" start="2024-09-12T11:49:14.891495" elapsed="5.581011"/>
+</test>
+<status status="PASS" start="2024-09-12T11:49:14.711822" elapsed="5.761854"/>
+</suite>
+<status status="PASS" start="2024-09-12T11:49:14.686107" elapsed="5.789564"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestSuite">TestSuite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcase">TestSuite.Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-12T11:49:14.889501" level="WARN">Imported resource file 'C:\Users\ADMIN\Desktop\Demo\Resources\locators.robot' is empty.</msg>
+</errors>
+</robot>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.9 on win32)" generated="2024-09-16T10:13:15.835989" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase" source="C:\Users\ADMIN\Desktop\Demo\TestSuite\testcase.robot">
+<test id="s1-t1" name="TC_01" line="5">
+<kw name="Login to Adactin" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:16.264832" level="INFO">Opening browser 'chrome' to base url 'https://adactinhotelapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-16T10:13:16.264832" elapsed="4.925341"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-16T10:13:21.191294" elapsed="0.079987"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:21.282903" level="INFO">Page title is 'Adactin.com - Hotel Reservation System'.</msg>
+<arg>Adactin.com - Hotel Reservation System</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-09-16T10:13:21.272076" elapsed="0.010827"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:21.286225" level="INFO">Typing text 'Tonystark1234' into text field 'id=username'.</msg>
+<arg>${userid.Username}</arg>
+<arg>Tonystark1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:21.283548" elapsed="0.510128"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:21.795251" level="INFO">Typing text 'A02801' into text field 'id=password'.</msg>
+<arg>${userid.password}</arg>
+<arg>A02801</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:21.794254" elapsed="0.133430"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:21.929059" level="INFO">Clicking button 'id=login'.</msg>
+<arg>${user.login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:21.929059" elapsed="0.864937"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2024-09-16T10:13:16.262809" elapsed="6.532224"/>
+</kw>
+<tag>chrome_Login</tag>
+<status status="PASS" start="2024-09-16T10:13:16.258269" elapsed="6.536764"/>
+</test>
+<test id="s1-t2" name="TC_02" line="9">
+<kw name="Search Hotels" owner="keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:22.854439" level="INFO">Current page contains text 'Search Hotel'.</msg>
+<arg>Search Hotel</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-09-16T10:13:22.796031" elapsed="0.059444"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:22.856473" level="INFO">Selecting options from selection list 'id=location' by value London.</msg>
+<arg>${hotel.location}</arg>
+<arg>London</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:22.855475" elapsed="0.140905"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:22.997931" level="INFO">Selecting options from selection list 'id=hotels' by value Hotel Sunshine.</msg>
+<arg>${hotel.name}</arg>
+<arg>Hotel Sunshine</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:22.996935" elapsed="0.139712"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:23.138641" level="INFO">Selecting options from selection list 'id=room_type' by value Double.</msg>
+<arg>${hotel.roomtype}</arg>
+<arg>Double</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:23.136647" elapsed="0.098505"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:23.236150" level="INFO">Selecting options from selection list 'id=room_nos' by value 3.</msg>
+<arg>${hotel.roomno}</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:23.235152" elapsed="0.127762"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:23.365200" level="INFO">Selecting options from selection list 'id=adult_room' by value 2.</msg>
+<arg>${hotel.adult}</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:23.364117" elapsed="0.441568"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:23.806707" level="INFO">Selecting options from selection list 'id=child_room' by value 1.</msg>
+<arg>${hotel.child}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:23.805685" elapsed="0.117918"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:23.925598" level="INFO">Clicking button 'id=Submit'.</msg>
+<arg>${hotel.submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:23.924601" elapsed="0.437581"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:13:22.796031" elapsed="1.566151"/>
+</kw>
+<tag>chrome__Searching Hotel</tag>
+<status status="PASS" start="2024-09-16T10:13:22.796031" elapsed="1.567148"/>
+</test>
+<test id="s1-t3" name="TC_03" line="12">
+<kw name="Select Hotel" owner="keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:24.397707" level="INFO">Current page contains text 'Select Hotel'.</msg>
+<arg>Select Hotel</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-09-16T10:13:24.366843" elapsed="0.030864"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:24.398704" level="INFO">Clicking button 'id=radiobutton_0'.</msg>
+<arg>${select.radiobtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:24.397707" elapsed="0.154383"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:24.553176" level="INFO">Clicking button 'id=continue'.</msg>
+<arg>${click.continue}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:24.553176" elapsed="0.555622"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:13:24.365174" elapsed="0.743624"/>
+</kw>
+<tag>chrome_Selecting Hotel</tag>
+<status status="PASS" start="2024-09-16T10:13:24.364176" elapsed="0.744622"/>
+</test>
+<test id="s1-t4" name="TC_04" line="15">
+<kw name="Book Hotel" owner="keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.143796" level="INFO">Current page contains text 'Book A Hotel'.</msg>
+<arg>Book A Hotel</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.112071" elapsed="0.032723"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.146062" level="INFO">Typing text 'Tony' into text field 'id=first_name'.</msg>
+<arg>${book.firstname}</arg>
+<arg>Tony</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.144794" elapsed="0.158333"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.304116" level="INFO">Typing text 'Stark1234' into text field 'id=last_name'.</msg>
+<arg>${book.lastname}</arg>
+<arg>Stark1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.303127" elapsed="0.159377"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.464096" level="INFO">Typing text 'xyz' into text field 'id=address'.</msg>
+<arg>${book.address}</arg>
+<arg>xyz</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.463573" elapsed="0.090684"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.555255" level="INFO">Typing text '5432198761234567' into text field 'id=cc_num'.</msg>
+<arg>${book.ccnum}</arg>
+<arg>5432198761234567</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.554257" elapsed="0.155626"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.711878" level="INFO">Selecting options from selection list 'id=cc_type' by value VISA.</msg>
+<arg>${book.cctype}</arg>
+<arg>VISA</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.710885" elapsed="0.082057"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.793939" level="INFO">Selecting options from selection list 'id=cc_exp_month' by value 6.</msg>
+<arg>${book.expmonth}</arg>
+<arg>6</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.793939" elapsed="0.096814"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.891750" level="INFO">Selecting options from selection list 'id=cc_exp_year' by value 2028.</msg>
+<arg>${book.expyear}</arg>
+<arg>2028</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.890753" elapsed="0.064919"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:25.956670" level="INFO">Typing text '123' into text field 'id=cc_cvv'.</msg>
+<arg>${book.cvv}</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:25.955672" elapsed="0.157524"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:26.113196" level="INFO">Clicking button 'id=book_now'.</msg>
+<arg>${book.submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:26.113196" elapsed="0.133812"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>7</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-09-16T10:13:26.247390" elapsed="0.002105"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-09-16T10:13:31.535857" level="INFO">${value} = 102PW02RK3</msg>
+<var>${value}</var>
+<arg>id=order_no</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-09-16T10:13:26.250495" elapsed="5.285362"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-16T10:13:31.536855" level="INFO">102PW02RK3</msg>
+<arg>${value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-16T10:13:31.535857" elapsed="0.001441"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>OrderNo.${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-16T10:13:31.537298" elapsed="0.000997"/>
+</kw>
+<status status="PASS" start="2024-09-16T10:13:25.111073" elapsed="6.427456"/>
+</kw>
+<tag>chrome_Booking Hotel</tag>
+<status status="PASS" start="2024-09-16T10:13:25.110076" elapsed="6.428453"/>
+</test>
+<status status="PASS" start="2024-09-16T10:13:15.852211" elapsed="15.687588"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">chrome_Booking Hotel</stat>
+<stat pass="1" fail="0" skip="0">chrome_Login</stat>
+<stat pass="1" fail="0" skip="0">chrome__Searching Hotel</stat>
+<stat pass="1" fail="0" skip="0">chrome_Selecting Hotel</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

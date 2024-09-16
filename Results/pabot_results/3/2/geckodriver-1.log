@@ -1,0 +1,22 @@
+1726461796440	geckodriver	INFO	Listening on 127.0.0.1:58723
+1726461799463	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58724" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ADMIN\\AppData\\Local\\Temp\\rust_mozprofile6CdcEB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1726461800190	Marionette	INFO	Marionette enabled
+1726461800527	Marionette	INFO	Listening on port 58769
+WebDriver BiDi listening on ws://127.0.0.1:58724
+Read port: 58769
+1726461800839	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://adactinhotelapp.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://adactinhotelapp.com."
+1726461806422	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1726461808575	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1726461809306	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1726461816040	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://adactinhotelapp.com/SearchHotel.php" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://adactinhotelapp.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://adactinhotelapp.com/SearchHotel.php" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://adactinhotelapp.com/" ({})
+1726463188152	Marionette	INFO	Stopped listening on port 58769
+Dynamically enable window occlusion 1

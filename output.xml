@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.9 on win32)" generated="2024-09-13T16:02:24.240250" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase" source="c:\Users\ADMIN\Desktop\Demo\TestSuite\testcase.robot">
+<test id="s1-t1" name="TC_01_Login" line="5">
+<kw name="Login to Adactin" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-13T16:02:24.490131" level="INFO">Opening browser 'ff' to base url 'https://adactinhotelapp.com/'.</msg>
+<msg time="2024-09-13T16:02:27.682667" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-09-13T16:02:27.682667" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-09-13T16:02:24.489128" elapsed="3.224422">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-13T16:02:27.715839" elapsed="0.000000"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Adactin.com - Hotel Reservation System</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2024-09-13T16:02:27.718130" elapsed="0.002462"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${userid.Username}</arg>
+<arg>Tonystark1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-13T16:02:27.722111" elapsed="0.001400"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${userid.password}</arg>
+<arg>A02801</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-13T16:02:27.724551" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${user.login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-13T16:02:27.724551" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-13T16:02:24.488098" elapsed="3.236453">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</kw>
+<tag>smoke</tag>
+<status status="FAIL" start="2024-09-13T16:02:24.487082" elapsed="3.243209">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<status status="FAIL" start="2024-09-13T16:02:24.245821" elapsed="3.516924"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
