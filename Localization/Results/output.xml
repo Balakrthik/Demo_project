@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.0.1 (Python 3.10.9 on win32)" generated="2024-09-23T18:36:26.838300" rpa="false" schemaversion="5">
+<suite id="s1" name="Sample &amp; Sample &amp; Sample">
+<suite id="s1-s1" name="Sample" source="C:\Users\ADMIN\Desktop\Demo\Localization\sample.robot">
+<test id="s1-s1-t1" name="TC_01" line="7">
+<kw name="Initialize open browser">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'CHROME'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:35:44.074377" level="INFO">Opening browser 'CHROME' to base url 'https://www.booking.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option('prefs', {"intl.accept_languages":"${LOCALIZATION}"});</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-23T18:35:44.074377" elapsed="4.999791"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-23T18:35:49.075164" elapsed="0.167522"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:35:44.074377" elapsed="5.168309"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'EDGE'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option('prefs', {"intl.accept_languages":"${LOCALIZATION}"});</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:49.243684" elapsed="0.000233"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:49.243917" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:35:49.242686" elapsed="0.001231"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'FIREFOX' or '${BROWSER}' == 'Firefox' or '${BROWSER}' == 'firefox'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>ff_profile_dir=set_preference("intl.accept_languages","${LOCALIZATION}")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:49.244915" elapsed="0.001018"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:49.245933" elapsed="0.000999"/>
+</kw>
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:49.246932" elapsed="0.001004"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:35:49.244547" elapsed="0.003389"/>
+</branch>
+<status status="PASS" start="2024-09-23T18:35:44.074377" elapsed="5.173559"/>
+</if>
+<status status="PASS" start="2024-09-23T18:35:44.074377" elapsed="5.173559"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Popup Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${POPUP_BUTTON}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T18:35:49.250720" elapsed="1.633982"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:35:50.886328" level="INFO">Clicking element '(//button[@type='button'])[57]'.</msg>
+<arg>${POPUP_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:35:50.885732" elapsed="0.088682"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-23T18:35:50.975608" level="INFO">Popup button clicked</msg>
+<arg>Popup button clicked</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-23T18:35:50.975608" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:35:49.247936" elapsed="1.727672"/>
+</kw>
+<msg time="2024-09-23T18:35:50.976606" level="INFO">${result} = PASS</msg>
+<msg time="2024-09-23T18:35:50.976606" level="INFO">${error} = None</msg>
+<var>${result}</var>
+<var>${error}</var>
+<arg>Click Popup Button</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-09-23T18:35:49.247936" elapsed="1.728670"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-23T18:35:50.978604" level="INFO">Successfully clicked the popup button</msg>
+<arg>Successfully clicked the popup button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-23T18:35:50.977603" elapsed="0.001001"/>
+</kw>
+<arg>'${error}' == 'None'</arg>
+<arg>Log</arg>
+<arg>Successfully clicked the popup button</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Popup button was not found or clickable</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-23T18:35:50.976606" elapsed="0.001998"/>
+</kw>
+<kw name="Validate the language">
+<if>
+<branch type="IF" condition="'${LOCALIZATION}' == '${EMPTY}'">
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${value}</var>
+<arg>${register.text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.979598" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${value}</arg>
+<arg>Register</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.979598" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Language : English</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.984480" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:35:50.979598" elapsed="0.005687"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Language : Spanish</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-23T18:35:50.986522" elapsed="0.000996"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:35:50.985285" elapsed="0.002233"/>
+</branch>
+<status status="PASS" start="2024-09-23T18:35:50.979598" elapsed="0.007920"/>
+</if>
+<status status="PASS" start="2024-09-23T18:35:50.979598" elapsed="0.008977"/>
+</kw>
+<kw name="Click Flights button">
+<if>
+<branch type="IF" condition="'${LOCALIZATION}' == '${EMPTY}'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${flights.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.991994" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${whereto.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.991994" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${enterdest.text}</arg>
+<arg>MAA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.991994" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.991994" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${select.dest}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.991994" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${search.button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:50.991994" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:35:50.989762" elapsed="0.002232"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:35:50.991994" level="INFO">Clicking element 'id=flights'.</msg>
+<arg>${flights.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:35:50.991994" elapsed="4.752194"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:35:55.747027" level="INFO">Clicking element '//button[@data-ui-name='input_location_to_segment_0']'.</msg>
+<arg>${whereto.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:35:55.745167" elapsed="0.112365"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:35:55.858529" level="INFO">Typing text 'MAA' into text field '//input[@placeholder='Aeropuerto o ciudad']'.</msg>
+<msg time="2024-09-23T18:35:56.094175" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-23T18:35:56.094175" level="FAIL">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</msg>
+<arg>${enterdest.text1}</arg>
+<arg>MAA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-09-23T18:35:55.857532" elapsed="0.236643">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:56.094175" elapsed="0.006162"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${select.dest1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:56.100337" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${search.button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:56.101302" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-23T18:35:50.991994" elapsed="5.109308">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</branch>
+<status status="FAIL" start="2024-09-23T18:35:50.989762" elapsed="5.111540">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</if>
+<status status="FAIL" start="2024-09-23T18:35:50.988575" elapsed="5.112727">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</kw>
+<tag>CHROME_en</tag>
+<status status="FAIL" start="2024-09-23T18:35:44.074377" elapsed="12.026925">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</test>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" start="2024-09-23T18:35:43.759000" elapsed="12.342132"/>
+</suite>
+<suite id="s1-s2" name="Sample" source="C:\Users\ADMIN\Desktop\Demo\Localization\sample.robot">
+<test id="s1-s2-t1" name="TC_01" line="7">
+<kw name="Initialize open browser">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'CHROME'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option('prefs', {"intl.accept_languages":"${LOCALIZATION}"});</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:57.102865" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-23T18:35:57.102865" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:35:57.102865" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'EDGE'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:35:57.102865" level="INFO">Opening browser 'EDGE' to base url 'https://www.booking.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option('prefs', {"intl.accept_languages":"${LOCALIZATION}"});</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-23T18:35:57.102865" elapsed="3.691310"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-23T18:36:00.794175" elapsed="0.117642"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:35:57.102865" elapsed="3.809951"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'FIREFOX' or '${BROWSER}' == 'Firefox' or '${BROWSER}' == 'firefox'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>ff_profile_dir=set_preference("intl.accept_languages","${LOCALIZATION}")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:00.913200" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:00.914406" elapsed="0.000163"/>
+</kw>
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:00.914971" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:36:00.912816" elapsed="0.002155"/>
+</branch>
+<status status="PASS" start="2024-09-23T18:35:57.102865" elapsed="3.812832"/>
+</if>
+<status status="PASS" start="2024-09-23T18:35:57.102865" elapsed="3.812832"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Popup Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${POPUP_BUTTON}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T18:36:00.915697" elapsed="3.039669"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:03.956405" level="INFO">Clicking element '(//button[@type='button'])[57]'.</msg>
+<arg>${POPUP_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:36:03.955366" elapsed="0.197618"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-23T18:36:04.154393" level="INFO">Popup button clicked</msg>
+<arg>Popup button clicked</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-23T18:36:04.154074" elapsed="0.000319"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:36:00.915697" elapsed="3.238696"/>
+</kw>
+<msg time="2024-09-23T18:36:04.155479" level="INFO">${result} = PASS</msg>
+<msg time="2024-09-23T18:36:04.155479" level="INFO">${error} = None</msg>
+<var>${result}</var>
+<var>${error}</var>
+<arg>Click Popup Button</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-09-23T18:36:00.915697" elapsed="3.239782"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-23T18:36:04.157474" level="INFO">Successfully clicked the popup button</msg>
+<arg>Successfully clicked the popup button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-23T18:36:04.156477" elapsed="0.000997"/>
+</kw>
+<arg>'${error}' == 'None'</arg>
+<arg>Log</arg>
+<arg>Successfully clicked the popup button</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Popup button was not found or clickable</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-23T18:36:04.155479" elapsed="0.001995"/>
+</kw>
+<kw name="Validate the language">
+<if>
+<branch type="IF" condition="'${LOCALIZATION}' == '${EMPTY}'">
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${value}</var>
+<arg>${register.text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.160077" elapsed="0.001038"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${value}</arg>
+<arg>Register</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.161123" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Language : English</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.162121" elapsed="0.000374"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:36:04.158981" elapsed="0.003586"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Language : Spanish</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-23T18:36:04.163369" elapsed="0.000697"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:36:04.162780" elapsed="0.001286"/>
+</branch>
+<status status="PASS" start="2024-09-23T18:36:04.158981" elapsed="0.005395"/>
+</if>
+<status status="PASS" start="2024-09-23T18:36:04.158471" elapsed="0.005905"/>
+</kw>
+<kw name="Click Flights button">
+<if>
+<branch type="IF" condition="'${LOCALIZATION}' == '${EMPTY}'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${flights.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.169357" elapsed="0.000030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${whereto.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.169387" elapsed="0.000999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${enterdest.text}</arg>
+<arg>MAA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.170570" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.170570" elapsed="0.001061"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${select.dest}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.171631" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${search.button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:04.172628" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:36:04.166683" elapsed="0.005945"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:04.173681" level="INFO">Clicking element 'id=flights'.</msg>
+<arg>${flights.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:36:04.173681" elapsed="4.390288"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:08.566601" level="INFO">Clicking element '//button[@data-ui-name='input_location_to_segment_0']'.</msg>
+<arg>${whereto.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:36:08.566601" elapsed="0.214329"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:08.780930" level="INFO">Typing text 'MAA' into text field '//input[@placeholder='Aeropuerto o ciudad']'.</msg>
+<msg time="2024-09-23T18:36:09.068104" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-23T18:36:09.068524" level="FAIL">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</msg>
+<arg>${enterdest.text1}</arg>
+<arg>MAA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-09-23T18:36:08.780930" elapsed="0.290588">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:09.071518" elapsed="0.000997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${select.dest1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:09.073263" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${search.button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:09.073263" elapsed="0.000996"/>
+</kw>
+<status status="FAIL" start="2024-09-23T18:36:04.172628" elapsed="4.901631">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</branch>
+<status status="FAIL" start="2024-09-23T18:36:04.166683" elapsed="4.907576">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</if>
+<status status="FAIL" start="2024-09-23T18:36:04.165163" elapsed="4.909096">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</kw>
+<tag>EDGE_en</tag>
+<status status="FAIL" start="2024-09-23T18:35:57.102865" elapsed="11.972391">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</test>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" start="2024-09-23T18:35:56.804000" elapsed="12.272567"/>
+</suite>
+<suite id="s1-s3" name="Sample" source="C:\Users\ADMIN\Desktop\Demo\Localization\sample.robot">
+<test id="s1-s3-t1" name="TC_01" line="7">
+<kw name="Initialize open browser">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'CHROME'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option('prefs', {"intl.accept_languages":"${LOCALIZATION}"});</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:10.183186" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:10.183186" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:36:10.181628" elapsed="0.001558"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'EDGE'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option('prefs', {"intl.accept_languages":"${LOCALIZATION}"});</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:10.183186" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:10.183186" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:36:10.183186" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'FIREFOX' or '${BROWSER}' == 'Firefox' or '${BROWSER}' == 'firefox'">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:10.183186" level="INFO">Opening browser 'firefox' to base url 'https://www.booking.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>ff_profile_dir=set_preference("intl.accept_languages","${LOCALIZATION}")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-23T18:36:10.183186" elapsed="9.021740"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-23T18:36:19.206116" elapsed="0.013066"/>
+</kw>
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2024-09-23T18:36:19.219887" elapsed="0.015956"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:36:10.183186" elapsed="9.053655"/>
+</branch>
+<status status="PASS" start="2024-09-23T18:36:10.181628" elapsed="9.055213"/>
+</if>
+<status status="PASS" start="2024-09-23T18:36:10.179546" elapsed="9.057295"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Popup Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${POPUP_BUTTON}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T18:36:19.238835" elapsed="2.564375"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:21.804685" level="INFO">Clicking element '(//button[@type='button'])[57]'.</msg>
+<arg>${POPUP_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:36:21.803210" elapsed="0.353145"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-23T18:36:22.161340" level="INFO">Popup button clicked</msg>
+<arg>Popup button clicked</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-23T18:36:22.159348" elapsed="0.002990"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:36:19.237839" elapsed="2.925498"/>
+</kw>
+<msg time="2024-09-23T18:36:22.164332" level="INFO">${result} = PASS</msg>
+<msg time="2024-09-23T18:36:22.165830" level="INFO">${error} = None</msg>
+<var>${result}</var>
+<var>${error}</var>
+<arg>Click Popup Button</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-09-23T18:36:19.236841" elapsed="2.929530"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-23T18:36:22.172841" level="INFO">Successfully clicked the popup button</msg>
+<arg>Successfully clicked the popup button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-23T18:36:22.171311" elapsed="0.001995"/>
+</kw>
+<arg>'${error}' == 'None'</arg>
+<arg>Log</arg>
+<arg>Successfully clicked the popup button</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Popup button was not found or clickable</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-23T18:36:22.168320" elapsed="0.006979"/>
+</kw>
+<kw name="Validate the language">
+<if>
+<branch type="IF" condition="'${LOCALIZATION}' == '${EMPTY}'">
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${value}</var>
+<arg>${register.text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.182411" elapsed="0.001117"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${value}</arg>
+<arg>Register</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.184276" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Language : English</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.185273" elapsed="0.000998"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:36:22.178291" elapsed="0.008418"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Language : Spanish</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-23T18:36:22.187268" elapsed="0.000996"/>
+</kw>
+<status status="PASS" start="2024-09-23T18:36:22.186709" elapsed="0.002049"/>
+</branch>
+<status status="PASS" start="2024-09-23T18:36:22.177295" elapsed="0.011463"/>
+</if>
+<status status="PASS" start="2024-09-23T18:36:22.176298" elapsed="0.013018"/>
+</kw>
+<kw name="Click Flights button">
+<if>
+<branch type="IF" condition="'${LOCALIZATION}' == '${EMPTY}'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${flights.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.193251" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${whereto.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.194624" elapsed="0.001676"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${enterdest.text}</arg>
+<arg>MAA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.197242" elapsed="0.000995"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.199234" elapsed="0.001047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${select.dest}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.200281" elapsed="0.000949"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${search.button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:22.201230" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-23T18:36:22.191255" elapsed="0.010973"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:22.203838" level="INFO">Clicking element 'id=flights'.</msg>
+<arg>${flights.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:36:22.202527" elapsed="3.330139"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:25.533664" level="INFO">Clicking element '//button[@data-ui-name='input_location_to_segment_0']'.</msg>
+<arg>${whereto.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T18:36:25.533664" elapsed="0.618256"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T18:36:26.153916" level="INFO">Typing text 'MAA' into text field '//input[@placeholder='Aeropuerto o ciudad']'.</msg>
+<msg time="2024-09-23T18:36:26.281090" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-23T18:36:26.282089" level="FAIL">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</msg>
+<arg>${enterdest.text1}</arg>
+<arg>MAA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-09-23T18:36:26.152960" elapsed="0.132120">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:26.285080" elapsed="0.001111"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${select.dest1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:26.286191" elapsed="0.000883"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${search.button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-23T18:36:26.287074" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-23T18:36:22.202228" elapsed="4.085844">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</branch>
+<status status="FAIL" start="2024-09-23T18:36:22.191255" elapsed="4.096990">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</if>
+<status status="FAIL" start="2024-09-23T18:36:22.190260" elapsed="4.097985">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</kw>
+<tag>firefox_en</tag>
+<status status="FAIL" start="2024-09-23T18:36:10.177552" elapsed="16.110693">Element with locator '//input[@placeholder='Aeropuerto o ciudad']' not found.</status>
+</test>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" start="2024-09-23T18:36:09.760000" elapsed="16.529616"/>
+</suite>
+<status status="FAIL" start="2024-09-23T18:35:43.371779" elapsed="43.439019"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">CHROME_en</stat>
+<stat pass="0" fail="1" skip="0">EDGE_en</stat>
+<stat pass="0" fail="1" skip="0">firefox_en</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Sample &amp; Sample &amp; Sample">Sample &amp; Sample &amp; Sample</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Sample">Sample &amp; Sample &amp; Sample.Sample</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="Sample">Sample &amp; Sample &amp; Sample.Sample</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="Sample">Sample &amp; Sample &amp; Sample.Sample</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
