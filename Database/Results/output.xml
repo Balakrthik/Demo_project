@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.9 on win32)" generated="2024-09-20T12:26:09.107123" rpa="false" schemaversion="5">
+<suite id="s1" name="Sampledb" source="C:\Users\ADMIN\Desktop\Demo\Database\sampledb.robot">
+<test id="s1-t1" name="Verify DB connection" line="13">
+<kw name="Connect To Database" owner="DatabaseLibrary">
+<msg time="2024-09-20T12:26:09.178854" level="INFO">Connecting using : pymysql.connect(db=information_schema, user=root, passwd=***, host=127.0.0.1, port=3306, charset=None)</msg>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+<doc>Loads the DB API 2.0 module given ``dbapiModuleName`` then uses it to
+connect to the database using provided parameters such as ``dbName``, ``dbUsername``, and ``dbPassword``.</doc>
+<status status="PASS" start="2024-09-20T12:26:09.149422" elapsed="0.041759"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2024-09-20T12:26:09.191538" level="INFO">Executing : Query  |  select * from information_schema.tables; </msg>
+<msg time="2024-09-20T12:26:09.223476" level="INFO">${Query} = (('def', 'mysql', 'innodb_table_stats', 'BASE TABLE', 'InnoDB', 10, 'Dynamic', 2, 8192, 16384, 0, 0, 4194304, None, datetime.datetime(2024, 9, 19, 12, 40, 4), None, None, 'utf8mb3_bin', None, 'row_for...</msg>
+<var>${Query}</var>
+<arg>select * from information_schema.tables;</arg>
+<doc>Runs a query with the ``selectStatement`` and returns the result as a list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2024-09-20T12:26:09.191538" elapsed="0.031938"/>
+</kw>
+<kw name="Disconnect From Database" owner="DatabaseLibrary">
+<msg time="2024-09-20T12:26:09.225471" level="INFO">Executing : Disconnect From Database</msg>
+<doc>Disconnects from the database.</doc>
+<status status="PASS" start="2024-09-20T12:26:09.225471" elapsed="0.000998"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${Query}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-20T12:26:09.226469" elapsed="0.078244"/>
+</kw>
+<status status="PASS" start="2024-09-20T12:26:09.148153" elapsed="0.157559"/>
+</test>
+<doc>Database Testing using Robot framework</doc>
+<status status="PASS" start="2024-09-20T12:26:09.109152" elapsed="0.198556"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sampledb">Sampledb</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
