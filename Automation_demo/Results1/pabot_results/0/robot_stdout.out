@@ -1,0 +1,26 @@
+==============================================================================
+Testsuite :: Automating Demo Website                                          
+==============================================================================
+TC_01_Open Browser and Maximize Window                                'Browser opened in Spanish languagae'
+| PASS |
+------------------------------------------------------------------------------
+TC_02_To verify that empty fields get an error value                  | PASS |
+------------------------------------------------------------------------------
+TC_03_To Verify the invalid credentials get an error value            | PASS |
+------------------------------------------------------------------------------
+TC_04_To verify with invalid value                                    | PASS |
+------------------------------------------------------------------------------
+TC_05_To verify with valid credentials                                | PASS |
+------------------------------------------------------------------------------
+TC_06_Change the country region and select product                    | PASS |
+------------------------------------------------------------------------------
+Tc_07 To verify invalid card details get an error value               | PASS |
+------------------------------------------------------------------------------
+TC_08 To verify the boundary value                                    | PASS |
+------------------------------------------------------------------------------
+TC_08 To verify Signout                                               | PASS |
+------------------------------------------------------------------------------
+Testsuite :: Automating Demo Website                                  | PASS |
+9 tests, 9 passed, 0 failed
+==============================================================================
+Output:  C:\Users\ADMIN\Desktop\Demo\Automation_demo\Results1\pabot_results\0\output.xml
